@@ -22,7 +22,7 @@ The [detailed documentation is here](./docs/README.md).
 For those not using the full [Klippain](https://github.com/Frix-x/klippain), follow these steps to integrate this Shake&Tune module in your setup:
   1. Run the install script over SSH on your printer:
      ```bash
-     wget -O - https://raw.githubusercontent.com/Frix-x/klippain-shaketune/main/install.sh | bash
+     wget -O - https://raw.githubusercontent.com/zellneralex/klippain-shaketune/main/install.sh | bash
      ```
   2. Append the following to your `printer.cfg` file:
      ```
@@ -34,7 +34,7 @@ For those not using the full [Klippain](https://github.com/Frix-x/klippain), fol
      type: git_repo
      path: ~/klippain_shaketune
      channel: beta
-     origin: https://github.com/Frix-x/klippain-shaketune.git
+     origin: https://github.com/zellneralex/klippain-shaketune.git
      primary_branch: main
      managed_services: klipper
      install_script: install.sh
