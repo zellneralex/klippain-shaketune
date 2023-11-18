@@ -2,7 +2,7 @@
 
 USER_CONFIG_PATH="${HOME}/printer_data/config"
 KLIPPER_PATH="${HOME}/klipper"
-K_SHAKETUNE_PATH="${HOME}/klippain_shaketune"
+K_SHAKETUNE_PATH="${HOME}/shaketune"
 
 set -eu
 export LC_ALL=C
@@ -36,7 +36,7 @@ function check_download {
 
     if [ ! -d "${K_SHAKETUNE_PATH}" ]; then
         echo "[DOWNLOAD] Downloading Klippain Shake&Tune module repository..."
-        if git -C $shaketunedirname clone https://github.com/Frix-x/klippain-shaketune.git $shaketunebasename; then
+        if git -C $shaketunedirname clone https://github.com/zellneralex/klippain-shaketune.git $shaketunebasename; then
             chmod +x ${K_SHAKETUNE_PATH}/install.sh
             printf "[DOWNLOAD] Download complete!\n\n"
         else
@@ -50,7 +50,7 @@ function check_download {
 
 function link_extension {
     echo "[INSTALL] Linking scripts to your config directory..."
-    ln -frsn ${K_SHAKETUNE_PATH}/K-ShakeTune ${USER_CONFIG_PATH}/K-ShakeTune
+    ln -frsn ${K_SHAKETUNE_PATH}/K-ShakeTune ${USER_CONFIG_PATH}/ShakeTune
 }
 
 function link_gcodeshellcommandpy {
